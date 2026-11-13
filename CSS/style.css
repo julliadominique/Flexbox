@@ -1,0 +1,76 @@
+/* 
+Observe que o card utiliza: display: flex;
+flex-direction: column;
+gap: 15px;
+*/
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.minha-loja {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 40px ;
+    align-items: center;
+}
+
+
+.produtos-body {
+    border-radius: 8px;
+    margin: 10px 10px 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(52, 197, 197, 0.438);
+
+}
+
+.produto {
+    background-color: #ffffff;
+    margin: 10px 5px 10px;
+    width: 220px;
+    padding: 20px;
+    justify-content: center;
+    border: 1px solid#dcdcdc;
+    border-radius: 8px;
+    gap: 20px;
+    box-shadow: 50px
+}
+
+.galeria {
+
+    border-radius: 8px;
+    display: flex;
+    padding: 15px;
+    margin: 10px 10px 5px;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: rgba(201, 126, 126, 0.13);
+}
+
+.card {
+    align-items: center;
+    background-color: rgba(161, 136, 139, 0.603);
+    width: 200px;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    gap: 20px;
+}
