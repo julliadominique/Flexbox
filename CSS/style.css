@@ -1,3 +1,23 @@
+
+
+.logo {
+    height: 70px;     
+    width: auto;   
+    display: block;
+}
+
+.header {
+    flex-direction: row;
+    justify-content: flex-start;     /* tudo começa na esquerda */
+    align-items: center;
+    gap: 40px;                       /* distância entre o logo e o menu */
+}
+
+
+
+
+
+
 /* 
 Observe que o card utiliza: display: flex;
 flex-direction: column;
@@ -25,7 +45,7 @@ gap: 15px;
 .menu {
     display: flex;
     gap: 40px ;
-    align-items: center;
+    align-self: center ;
 }
 
 
@@ -114,4 +134,168 @@ button:hover {
 .card:hover{
     transform: scale(1.1);
 }
-    
+/* ==========================================================
+   PALETA CORES 
+   ========================================================== */
+:root {
+    --creme: #FBF6F2;
+    --rosa: #F5D8CC;
+    --rosa-claro: #F6E8E2;
+    --vinho: #A33B3B;
+    --vinho-escuro: #862E2E;
+    --marrom: #4A403C;
+    --marrom-suave: #7C706B;
+    --borda: #E8DDD7;
+    --sombra: rgba(74, 64, 60, 0.12);
+}
+
+
+/* ---------- Página ---------- */
+html,
+body {
+    background-color: var(--creme);
+    color: var(--marrom);
+}
+
+/* ---------- Cabeçalho ---------- */
+.header {
+    background-color: var(--rosa);
+    border-bottom: 1px solid var(--borda);
+}
+
+.minha-loja {
+    color: var(--vinho);
+}
+
+.menu a {
+    color: var(--marrom);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--vinho);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* ---------- Faixa de produtos ---------- */
+.produtos-body {
+    background-color: var(--rosa);
+}
+
+/* ---------- Cards de produto ---------- */
+.produto {
+    background-color: var(--creme);
+    border: 1px solid var(--borda);
+    color: var(--marrom);
+    box-shadow: 0 6px 18px var(--sombra);
+}
+
+.produto:hover {
+    background-color: var(--rosa-claro);
+}
+
+.produto h2 {
+    color: var(--marrom);
+}
+
+.produto p {
+    color: var(--marrom-suave);
+}
+
+.produto strong {
+    color: var(--vinho);
+}
+
+/* Fundo atrás das imagens (aparece enquanto carregam) */
+.guasha,
+.creme {
+    background-color: var(--rosa-claro);
+    border: 1px solid var(--borda);
+}
+
+/* ---------- Botão ---------- */
+button {
+    background-color: var(--vinho);
+    color: #fff;
+    border: 1px solid var(--vinho);
+}
+
+button:hover {
+    background-color: var(--vinho-escuro);
+    border-color: var(--vinho-escuro);
+}
+
+/* ---------- Galeria e cards ---------- */
+.galeria {
+    background-color: var(--rosa-claro);
+    border: 1px solid var(--borda);
+}
+
+.card {
+    background-color: var(--rosa);
+    border: 1px solid var(--borda);
+    color: var(--marrom);
+}
+
+.card:hover {
+    background-color: var(--vinho);
+    border-color: var(--vinho);
+    color: #fff;
+}
+.card1 { background-image: url("../img/galeria1.jpg"); }
+.card2 { background-image: url("../img/galeria2.jpg"); }
+.card3 { background-image: url("../img/galeria3.jpg"); }
+.card4 { background-image: url("../img/galeria4.jpg"); }
+
+.card1, .card2, .card3, .card4 {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 16px;
+    font-family: "Outfit", "Segoe UI", Arial, sans-serif;
+}
+
+.produtos-body {
+    padding: 24px;
+    align-items: stretch;      /* todos os cards com a mesma altura */
+    justify-content: center;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;                 /* o espaçamento fica por conta do gap do .produtos-body */
+    min-height: auto;
+}
+
+.produto h2 {
+    white-space: normal;       /* deixa o título quebrar em 2 linhas */
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 1.2rem;
+}
+
+.produto p {
+    flex-grow: 1;              /* empurra o preço e o botão para o fim do card */
+}
+
+.guasha,
+.creme {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+button {
+    align-self: stretch;       /* botão ocupa a largura do card */
+    cursor: pointer;
+}
